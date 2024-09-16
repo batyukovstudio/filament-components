@@ -1,6 +1,6 @@
 <?php
 
-namespace Batyukovstudio\BatMedia\Components\AdminComponents;
+namespace Batyukovstudio\BatMedia\Filament\Components\AdminComponents;
 
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Textarea;
