@@ -1,0 +1,29 @@
+{
+  "name": "batyukovstudio/bat-media-components",
+  "description": "Bat media filament components",
+  "license": "MIT",
+  "keywords": [
+    "bat",
+    "media",
+    "laravel",
+    "filament"
+  ],
+  "authors": [
+    {
+      "name": "batyukovstudio.com",
+      "email": "batyukovstudio@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Batyukovstudio\\BatMedia\\Filament\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.2",
+    "intervention/image-laravel": "^1.3",
+    "filament/filament": "^3.2",
+    "filament/spatie-laravel-media-library-plugin":"^3.2"
+  },
+  "minimum-stability": "dev"
+}
