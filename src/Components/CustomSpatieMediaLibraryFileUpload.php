@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Components;
+namespace Batyukovstudio\BatMedia\Filament\Components;
 
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Illuminate\Database\Eloquent\Model;
