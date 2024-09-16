@@ -1,6 +1,7 @@
 {
   "name": "batyukovstudio/bat-media-components",
   "description": "Bat media filament components",
+  "version": "0.0.1-dev",
   "license": "MIT",
   "keywords": [
     "bat",
