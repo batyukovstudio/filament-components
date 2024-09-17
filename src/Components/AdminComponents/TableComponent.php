@@ -16,14 +16,6 @@ class TableComponent
                 ->toggleable();
     }
 
-    public static function idAndNameTableComponents(): array
-    {
-        return [
-            self::idTableComponent(),
-            self::nameTableComponent()
-        ];
-    }
-
     public static function nameTableComponent(string $label = 'Название', int $limit = 45): TextColumn
     {
         return
