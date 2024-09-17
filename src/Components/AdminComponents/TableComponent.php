@@ -7,14 +7,13 @@ use Illuminate\Support\Arr;
 
 class TableComponent
 {
-    public static function idTableComponent(): array
+    public static function idTableComponent(string $label = 'ID'): TextColumn
     {
-        return [
+        return
             TextColumn::make('id')
-                ->label('ID')
+                ->label($label)
                 ->sortable()
-                ->toggleable()
-        ];
+                ->toggleable();
     }
 
     public static function idAndNameTableComponents(): array
@@ -25,48 +24,43 @@ class TableComponent
         ]);
     }
 
-    public static function nameTableComponent(): array
+    public static function nameTableComponent(string $label = 'Название', int $limit = 45): TextColumn
     {
-        return [
+        return
             TextColumn::make('name')
-                ->label('Название')
+                ->label($label)
                 ->searchable()
                 ->toggleable()
                 ->sortable()
-                ->limit(45),
-        ];
+                ->limit($limit);
     }
 
-    public static function slugTableComponent(): array
+    public static function slugTableComponent(string $label = 'Ссылка', int $limit = 50): TextColumn
     {
-        return [
+        return
             TextColumn::make('slug')
                 ->sortable()
                 ->searchable()
                 ->toggleable()
-                ->limit(50)
-                ->label('Ссылка')
-        ];
-
+                ->limit($limit)
+                ->label($label);
     }
 
-    public static function orderingTableComponent(): array
+    public static function orderingTableComponent(string $label = 'Сортировка'): TextColumn
     {
-        return [
+        return
             TextColumn::make('ordering')
-                ->label('Сортировка')
-                ->sortable()
-        ];
+                ->label($label)
+                ->sortable();
     }
 
-    public static function descriptionTableComponent(): array
+    public static function descriptionTableComponent(int $limit = 50): TextColumn
     {
-        return [
+        return
             TextColumn::make('description')
                 ->label('Описание')
-                ->limit(50)
-                ->toggleable()
-        ];
+                ->limit($limit)
+                ->toggleable();
     }
 
     public static function rolesAndPermissionsTablesComponents(): array
@@ -91,44 +85,42 @@ class TableComponent
         return $tableColumns;
     }
 
-    public static function fullNameTableComponents(): array
+    public static function fullNameTableComponents(int $limit = 50): array
     {
         return [
             TextColumn::make('l_name')
                 ->label('Фамилия')
-                ->limit(50)
+                ->limit($limit)
                 ->sortable()
                 ->toggleable(),
             TextColumn::make('f_name')
                 ->label('Имя')
-                ->limit(50)
+                ->limit($limit)
                 ->sortable()
                 ->toggleable(),
             TextColumn::make('m_name')
                 ->label('Отчество')
-                ->limit(50)
+                ->limit($limit)
                 ->sortable()
                 ->toggleable()
         ];
     }
 
-    public static function createdAtTableComponent(): array
+    public static function createdAtTableComponent(): TextColumn
     {
-        return [
+        return
             TextColumn::make('created_at')
                 ->sortable()
                 ->label('Дата создания')
-                ->dateTime()
-        ];
+                ->dateTime();
     }
 
-    public static function publishedAtTableComponent(): array
+    public static function publishedAtTableComponent(): TextColumn
     {
-        return [
+        return
             TextColumn::make('published_at')
                 ->sortable()
                 ->label('Дата публикации')
-                ->dateTime()
-        ];
+                ->dateTime();
     }
 }
