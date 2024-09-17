@@ -18,10 +18,10 @@ class TableComponent
 
     public static function idAndNameTableComponents(): array
     {
-        return Arr::collapse([
+        return [
             self::idTableComponent(),
             self::nameTableComponent()
-        ]);
+        ];
     }
 
     public static function nameTableComponent(string $label = 'Название', int $limit = 45): TextColumn
